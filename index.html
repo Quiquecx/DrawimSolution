@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrechusTech — Software Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">
+        <span class="logo-bracket">&lt;</span>Prechus<span class="logo-accent">Tech</span><span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto" class="nav-cta">Hablemos</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#servicios" class="mobile-link">Servicios</a></li>
+      <li><a href="#proceso" class="mobile-link">Proceso</a></li>
+      <li><a href="#portafolio" class="mobile-link">Portafolio</a></li>
+      <li><a href="#nosotros" class="mobile-link">Nosotros</a></li>
+      <li><a href="#contacto" class="mobile-link">Hablemos</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        Disponible para nuevos proyectos
+      </div>
+      <h1 class="hero-title reveal-up delay-1">
+        Software que<br />
+        <span class="gradient-text typewriter" id="typewriter"></span>
+      </h1>
+      <p class="hero-sub reveal-up delay-2">
+        Transformamos ideas complejas en productos digitales de alto impacto.<br />
+        Desarrollo, arquitectura y estrategia tecnológica para empresas que no se conforman.
+      </p>
+      <div class="hero-actions reveal-up delay-3">
+        <a href="#contacto" class="btn-primary">
+          <span>Iniciar proyecto</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#portafolio" class="btn-ghost">Ver nuestro trabajo</a>
+      </div>
+      <div class="hero-stats reveal-up delay-4">
+        <div class="stat">
+          <span class="stat-number" data-target="24">0</span><span class="stat-suffix">/7</span>
+          <span class="stat-label">Disponibilidad de tus procesos críticos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="3">0</span><span class="stat-suffix">x</span>
+          <span class="stat-label">Más rápido que contratar un equipo interno</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Software diseñado para tu forma de trabajar</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>React</span><span class="ticker-sep">✦</span>
+      <span>Node.js</span><span class="ticker-sep">✦</span>
+      <span>AWS</span><span class="ticker-sep">✦</span>
+      <span>Python</span><span class="ticker-sep">✦</span>
+      <span>Kubernetes</span><span class="ticker-sep">✦</span>
+      <span>Machine Learning</span><span class="ticker-sep">✦</span>
+      <span>Flutter</span><span class="ticker-sep">✦</span>
+      <span>GraphQL</span><span class="ticker-sep">✦</span>
+      <span>TypeScript</span><span class="ticker-sep">✦</span>
+      <span>PostgreSQL</span><span class="ticker-sep">✦</span>
+      <span>Docker</span><span class="ticker-sep">✦</span>
+      <span>Next.js</span><span class="ticker-sep">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span>React</span><span class="ticker-sep">✦</span>
+      <span>Node.js</span><span class="ticker-sep">✦</span>
+      <span>AWS</span><span class="ticker-sep">✦</span>
+      <span>Python</span><span class="ticker-sep">✦</span>
+      <span>Kubernetes</span><span class="ticker-sep">✦</span>
+      <span>Machine Learning</span><span class="ticker-sep">✦</span>
+      <span>Flutter</span><span class="ticker-sep">✦</span>
+      <span>GraphQL</span><span class="ticker-sep">✦</span>
+      <span>TypeScript</span><span class="ticker-sep">✦</span>
+      <span>PostgreSQL</span><span class="ticker-sep">✦</span>
+      <span>Docker</span><span class="ticker-sep">✦</span>
+      <span>Next.js</span><span class="ticker-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Lo que hacemos</span>
+        <h2 class="section-title reveal-up delay-1">Soluciones que <span class="gradient-text">hacen crecer tu negocio</span></h2>
+        <p class="section-sub reveal-up delay-2">Cada servicio está diseñado para darte una ventaja competitiva real — no solo tecnología por tecnología.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal-card" data-delay="0">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Tu negocio en la palma de la mano</h3>
+          <p>Lleva tu empresa al mundo digital con una app o sitio que tus clientes amarán usar. Vende más, atiende mejor y opera 24/7 sin esfuerzo extra — todo desde web o celular.</p>
+          <ul class="service-tags">
+            <li>Apps móviles</li><li>Sitios web</li><li>Tiendas en línea</li>
+          </ul>
+          <div class="service-arrow">→</div>
+        </div>
+        <div class="service-card reveal-card" data-delay="100">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+          </div>
+          <h3>Software a la medida para tu empresa</h3>
+          <p>¿Cansado de pagar licencias de software que no se adaptan a ti? Creamos herramientas de escritorio y sistemas internos hechos exactamente para como trabaja tu equipo.</p>
+          <ul class="service-tags">
+            <li>Sistemas internos</li><li>ERP / CRM</li><li>Escritorio</li>
+          </ul>
+          <div class="service-arrow">→</div>
+        </div>
+        <div class="service-card reveal-card" data-delay="200">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <h3>Automatiza lo que te quita tiempo</h3>
+          <p>Deja que la inteligencia artificial trabaje por ti. Elimina tareas repetitivas, toma mejores decisiones con datos reales y libera a tu equipo para lo que realmente importa.</p>
+          <ul class="service-tags">
+            <li>Automatización</li><li>Análisis de datos</li><li>IA generativa</li>
+          </ul>
+          <div class="service-arrow">→</div>
+        </div>
+        <div class="service-card reveal-card featured-card" data-delay="0">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Tu propio equipo de desarrollo de calidad y eficiencia</h3>
+          <p>Obtén un equipo completo que trabaja exclusivamente para ti — sin reclutamiento, sin nóminas extra, sin curva de aprendizaje. Empiezas a producir desde el primer día.</p>
+          <ul class="service-tags">
+            <li>Equipo completo</li><li>Entrega continua</li><li>Sin contratos largos</li>
+          </ul>
+          <div class="service-arrow">→</div>
+          <div class="card-featured-badge">Popular</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNCIONALIDADES ERP -->
+  <section id="funcionalidades" class="funcionalidades-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Todo en un solo sistema</span>
+        <h2 class="section-title reveal-up delay-1">Imagina tener el control total<br /><span class="gradient-text">de tu empresa desde una pantalla</span></h2>
+        <p class="section-sub reveal-up delay-2">Un sistema hecho para ti puede hacer todo esto — y mucho más. ¿Cuánto de esto sigue siendo manual en tu empresa hoy?</p>
+      </div>
+      <div class="funcionalidades-grid">
+
+        <div class="func-item reveal-card" data-delay="0">
+          <div class="func-icon">📦</div>
+          <div class="func-text">
+            <strong>Control de inventario en tiempo real</strong>
+            <span>Sabe exactamente qué tienes, dónde está y cuándo reponer — sin contar a mano ni perder mercancía.</span>
+          </div>
+        </div>
+
+        <div class="func-item reveal-card" data-delay="60">
+          <div class="func-icon">👥</div>
+          <div class="func-text">
+            <strong>Gestión de recursos humanos</strong>
+            <span>Altas, bajas, expedientes, contratos y documentos de todo tu personal organizados y accesibles con un clic.</span>
+          </div>
+        </div>
+
+        <div class="func-item reveal-card" data-delay="120">
+          <div class="func-icon">💰</div>
+          <div class="func-text">
+            <strong>Nómina automática sin errores</strong>
+            <span>Calcula sueldos, deducciones y percepciones en segundos. Genera recibos digitales y evita multas por errores de cálculo.</span>
+          </div>
+        </div>
+
+        <div class="func-item reveal-card" data-delay="180">
+          <div class="func-icon">🚛</div>
+          <div class="func-text">
+            <strong>Control de flotilla y logística</strong>
+            <span>Rastrea tus vehículos, asigna rutas, monitorea combustible y reduce tiempos de entrega — todo desde el sistema.</span>
+          </div>
+        </div>
+
+        <div class="func-item reveal-card" data-delay="240">
+          <div class="func-icon">🧾</div>
+          <div class="func-text">
+            <strong>Facturación y cobranza integrada</strong>
+            <span>Emite facturas, da seguimiento a pagos pendientes y conecta con el SAT sin salir del sistema.</span>
+          </div>
+        </div>
+
+        <div class="func-item reveal-card" data-delay="300">
+          <div class="func-icon">📊</div>
+          <div class="func-text">
+            <strong>Reportes y métricas de negocio</strong>
+            <span>Dashboards con los números que importan: ventas, costos, productividad. Sin Excel, sin adivinar.</span>
+          </div>
+        </div>
+
+        <div class="func-item reveal-card" data-delay="0">
+          <div class="func-icon">🗓️</div>
+          <div class="func-text">
+            <strong>Gestión de asistencias y horarios</strong>
+            <span>Controla entradas, salidas, permisos y vacaciones de todo tu equipo — con alertas automáticas de incidencias.</span>
+          </div>
+        </div>
+
+        <div class="func-item reveal-card" data-delay="60">
+          <div class="func-icon">🤝</div>
+          <div class="func-text">
+            <strong>CRM: seguimiento de clientes y ventas</strong>
+            <span>Nunca pierdas un prospecto. Registra cada contacto, cotización y cierre para que tu equipo comercial siempre sepa qué sigue.</span>
+          </div>
+        </div>
+
+        <div class="func-item reveal-card" data-delay="120">
+          <div class="func-icon">🔔</div>
+          <div class="func-text">
+            <strong>Alertas y notificaciones inteligentes</strong>
+            <span>El sistema te avisa antes de que algo falle: contratos por vencer, stock bajo, pagos atrasados o rutas retrasadas.</span>
+          </div>
+        </div>
+
+        <div class="func-item reveal-card" data-delay="180">
+          <div class="func-icon">📱</div>
+          <div class="func-text">
+            <strong>Portal del empleado en su celular</strong>
+            <span>Tu equipo consulta recibos, solicita vacaciones y reporta incidencias desde su teléfono — sin llamar a RH.</span>
+          </div>
+        </div>
+
+        <div class="func-item reveal-card" data-delay="240">
+          <div class="func-icon">🔐</div>
+          <div class="func-text">
+            <strong>Roles y permisos por área</strong>
+            <span>Cada persona ve solo lo que necesita. Finanzas ve finanzas, operaciones ve operaciones. Seguridad total.</span>
+          </div>
+        </div>
+
+        <div class="func-item reveal-card func-item--highlight" data-delay="300">
+          <div class="func-icon">✨</div>
+          <div class="func-text">
+            <strong>Y lo que tu negocio necesite</strong>
+            <span>Todo sistema que construimos se adapta 100% a tus procesos. Si lo puedes imaginar, lo podemos construir.</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="funcionalidades-cta reveal-up">
+        <a href="#contacto" class="btn-primary large">
+          <span>Quiero un sistema así para mi empresa</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="proceso" class="proceso-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Cómo trabajamos</span>
+        <h2 class="section-title reveal-up delay-1">Un proceso <span class="gradient-text">sin sorpresas</span></h2>
+      </div>
+      <div class="proceso-steps">
+        <div class="proceso-step reveal-left">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Descubrimiento</h3>
+            <p>Entendemos el problema de fondo, no solo los síntomas. Workshop de 2 días que define todo lo demás.</p>
+          </div>
+        </div>
+        <div class="proceso-connector"></div>
+        <div class="proceso-step reveal-right">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Arquitectura & Plan</h3>
+            <p>Diseñamos la solución técnica correcta, no la más cara ni la más rápida. La que tiene sentido.</p>
+          </div>
+        </div>
+        <div class="proceso-connector"></div>
+        <div class="proceso-step reveal-left">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Construcción Iterativa</h3>
+            <p>Sprints de 2 semanas con demos reales. Ves avance desde el día 14, sin esperar meses.</p>
+          </div>
+        </div>
+        <div class="proceso-connector"></div>
+        <div class="proceso-step reveal-right">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>Launch & Escalamiento</h3>
+            <p>Lanzamos, medimos, optimizamos. El proyecto no termina en la entrega, termina cuando escala.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTAFOLIO -->
+  <section id="portafolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Resultados reales</span>
+        <h2 class="section-title reveal-up delay-1">Proyectos que <span class="gradient-text">hablan por sí solos</span></h2>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-card reveal-card" data-delay="0">
+          <div class="portfolio-img port-img--fintech">
+            <div class="portfolio-overlay">
+              <span class="port-tag">Logística</span>
+              <div class="port-links">
+                <a href="#" class="port-link">Ver caso →</a>
+              </div>
+            </div>
+            <div class="port-mockup">
+              <div class="mock-bar"></div>
+              <div class="mock-content">
+                <div class="mock-line w80"></div>
+                <div class="mock-line w60"></div>
+                <div class="mock-chart">
+                  <div class="chart-bar h40"></div>
+                  <div class="chart-bar h70"></div>
+                  <div class="chart-bar h55"></div>
+                  <div class="chart-bar h90"></div>
+                  <div class="chart-bar h65"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>ERP para Empresa de Logística</h3>
+            <p>Sistema integral que centraliza inventario, rutas, facturación y operaciones en un solo lugar — eliminando hojas de cálculo y errores humanos que costaban miles al mes.</p>
+            <div class="portfolio-metrics">
+              <span><strong>60%</strong> menos errores operativos</span>
+              <span><strong>8 áreas</strong> integradas</span>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-card reveal-card" data-delay="150">
+          <div class="portfolio-img port-img--salud">
+            <div class="portfolio-overlay">
+              <span class="port-tag">Recursos Humanos</span>
+              <div class="port-links">
+                <a href="#" class="port-link">Ver caso →</a>
+              </div>
+            </div>
+            <div class="port-mockup mobile-mockup">
+              <div class="phone-frame">
+                <div class="phone-screen">
+                  <div class="mock-line w70"></div>
+                  <div class="mock-circle"></div>
+                  <div class="mock-line w50"></div>
+                  <div class="mock-line w80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>App de Nóminas & Portal RH</h3>
+            <p>Los empleados consultan recibos, solicitan vacaciones y resuelven dudas de RH desde su celular. El equipo de RH administra todo desde un panel central sin papeleo.</p>
+            <div class="portfolio-metrics">
+              <span><strong>1,200+</strong> empleados activos</span>
+              <span><strong>80%</strong> menos consultas a RH</span>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-card reveal-card" data-delay="300">
+          <div class="portfolio-img port-img--logistica">
+            <div class="portfolio-overlay">
+              <span class="port-tag">Logística</span>
+              <div class="port-links">
+                <a href="#" class="port-link">Ver caso →</a>
+              </div>
+            </div>
+            <div class="port-mockup">
+              <div class="mock-bar"></div>
+              <div class="mock-content">
+                <div class="mock-map">
+                  <div class="map-dot map-dot--a"></div>
+                  <div class="map-dot pulse map-dot--b"></div>
+                  <div class="map-dot map-dot--c"></div>
+                  <div class="map-line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>Control de Flota en Tiempo Real</h3>
+            <p>Sistema IoT + dashboard para tracking de 2,000+ vehículos con optimización de rutas por ML.</p>
+            <div class="portfolio-metrics">
+              <span><strong>30%</strong> menos costos</span>
+              <span><strong>2K+</strong> vehículos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACTO VISUAL -->
+  <section id="impacto" class="impacto-section">
+    <div class="impacto-bg"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">El costo de no actuar</span>
+        <h2 class="section-title reveal-up delay-1">Cada día sin el software correcto<br /><span class="gradient-text">es dinero que se escapa</span></h2>
+      </div>
+      <div class="impacto-grid">
+        <div class="impacto-card reveal-card" data-delay="0">
+          <div class="impacto-icon">📋</div>
+          <h3>Procesos manuales</h3>
+          <p>Tu equipo pierde horas en tareas que un sistema podría hacer en segundos. Ese tiempo vale dinero — y se va cada semana.</p>
+          <div class="impacto-vs">
+            <span class="vs-before">Horas perdidas en datos manuales</span>
+            <span class="vs-arrow">→</span>
+            <span class="vs-after">Automatización que libera a tu equipo</span>
+          </div>
+        </div>
+        <div class="impacto-card reveal-card" data-delay="150">
+          <div class="impacto-icon">🔗</div>
+          <h3>Sistemas desconectados</h3>
+          <p>Cuando ventas, operaciones y finanzas no hablan entre sí, los errores se multiplican y las decisiones se toman a ciegas.</p>
+          <div class="impacto-vs">
+            <span class="vs-before">Información dispersa en 5 herramientas</span>
+            <span class="vs-arrow">→</span>
+            <span class="vs-after">Un solo sistema, toda la visibilidad</span>
+          </div>
+        </div>
+        <div class="impacto-card reveal-card" data-delay="300">
+          <div class="impacto-icon">📉</div>
+          <h3>Tecnología que no escala</h3>
+          <p>Lo que funcionaba con 10 clientes se rompe con 500. Crecer duele cuando tu operación no está lista para el siguiente nivel.</p>
+          <div class="impacto-vs">
+            <span class="vs-before">Sistemas que frenan el crecimiento</span>
+            <span class="vs-arrow">→</span>
+            <span class="vs-after">Plataforma que escala contigo</span>
+          </div>
+        </div>
+      </div>
+      <div class="impacto-cta reveal-up">
+        <p>¿Cuánto te está costando hoy no tener el software correcto?</p>
+        <a href="#contacto" class="btn-primary">
+          <span>Calculemos juntos</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="nosotros-section">
+    <div class="container nosotros-inner">
+      <div class="nosotros-text reveal-left">
+        <span class="section-tag">Quiénes somos</span>
+        <h2 class="section-title">Ingenieros que<br /><span class="gradient-text">también hacen negocio</span></h2>
+        <p>No somos una fábrica de código. Somos un equipo selecto de ingenieros senior, arquitectos y estrategas tecnológicos que entienden que el software es un medio, no un fin.</p>
+        <p>Trabajamos con equipos que quieren mover la aguja, no solo "hacer el trabajo". Si buscas el proveedor más barato, no somos para ti. Si buscas el mejor ROI, hablemos.</p>
+        <div class="nosotros-values">
+          <div class="value-item">
+            <div class="value-icon">⚡</div>
+            <div>
+              <strong>Velocidad con criterio</strong>
+              <span>Rápido no significa apresurado</span>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🎯</div>
+            <div>
+              <strong>Foco en resultados</strong>
+              <span>Métricas de negocio, no de vanidad</span>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🔒</div>
+            <div>
+              <strong>Compromiso radical</strong>
+              <span>Si firmamos, cumplimos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nosotros-visual reveal-right">
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar avatar--purple">GA</div>
+            <strong>Gabriel A. Ramírez</strong>
+            <span>CEO</span>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar avatar--pink">LF</div>
+            <strong>Luis F. Figueroa</strong>
+            <span>Dir. Marketing</span>
+          </div>
+<div class="team-card">
+            <div class="team-avatar avatar--green">JG</div>
+            <strong>Jesús Gutiérrez</strong>
+            <span>Senior Developer</span>
+          </div>
+        </div>
+        <div class="tech-badges">
+          <span>15+ tecnologías</span>
+          <span>4 países</span>
+          <span>Senior only</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="cta-glow"></div>
+    <div class="container">
+      <h2 class="reveal-up">¿Tienes un proyecto en mente?</h2>
+      <p class="reveal-up delay-1">Sin presión, sin propuestas genéricas. Solo una conversación honesta sobre si podemos ayudarte.</p>
+      <a href="#contacto" class="btn-primary large reveal-up delay-2">
+        <span>Agenda tu llamada gratuita</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto-section">
+    <div class="container contacto-inner">
+      <div class="contacto-info reveal-left">
+        <span class="section-tag">Contacto</span>
+        <h2 class="section-title">Empecemos<br /><span class="gradient-text">algo grande</span></h2>
+        <p>Cuéntanos sobre tu proyecto. Respondemos en menos de 24 horas.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>ventas@prechus.com</span>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+523311854242" class="contact-link">
+              +52 (33) 1185-4242
+            </a>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.52 3.48A11.8 11.8 0 0 0 12.04 0C5.52 0 .2 5.32.2 11.84c0 2.08.54 4.12 1.58 5.92L0 24l6.4-1.68a11.84 11.84 0 0 0 5.64 1.44h.01c6.52 0 11.84-5.32 11.84-11.84 0-3.16-1.24-6.14-3.37-8.44z"/>
+            </svg>
+
+            <a
+              href="https://wa.me/523311854242?text=Hola%20PrechusTech,%20me%20interesa%20una%20cotización"
+              target="_blank"
+              class="contact-link"
+            >
+              WhatsApp: +52 (33) 1185-4242
+            </a>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/></svg>
+            <span>GDL, JALISCO — 100% remoto</span>
+          </div>
+          <a
+            href="https://wa.me/523311854242?text=Hola%20PrechusTech,%20me%20interesa%20una%20cotización"
+            target="_blank"
+            class="whatsapp-contact-btn"
+          >
+            <svg viewBox="0 0 32 32" fill="currentColor">
+              <path d="M19.11 17.37c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.66.15-.19.29-.76.95-.93 1.14-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.32-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.6-.9-2.19-.24-.58-.48-.5-.66-.51h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-.99 2.43.03 1.43 1.03 2.81 1.17 3 .14.19 2.02 3.08 4.89 4.31.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.72-.7 1.96-1.37.24-.67.24-1.24.17-1.36-.07-.12-.27-.19-.56-.33z"/>
+              <path d="M16.01 3C8.83 3 3 8.82 3 16c0 2.54.73 5.01 2.11 7.13L3 29l5.99-2.05A12.94 12.94 0 0 0 16.01 29C23.18 29 29 23.18 29 16S23.18 3 16.01 3zm0 23.66c-2.15 0-4.25-.58-6.09-1.69l-.44-.26-3.56 1.22 1.16-3.47-.29-.46A10.63 10.63 0 1 1 16.01 26.66z"/>
+            </svg>
+
+            <span>Escríbenos por WhatsApp</span>
+          </a>
+        </div>
+      </div>
+      <form class="contacto-form reveal-right" id="contactForm">
+        <!-- Web3Forms: activa en https://web3forms.com — usa fregosogenrique@gmail.com para obtener tu access_key -->
+        <input type="hidden" name="access_key" id="w3f_key" value="bfc4e568-dd96-4d1b-9eaa-12660c125063" />
+        <input type="hidden" name="subject" value="Nuevo contacto desde PrechusTech.com" />
+        <input type="hidden" name="from_name" value="PrechusTech Website" />
+        <input type="hidden" name="redirect" value="false" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" />
+        </div>
+        <div class="form-group">
+          <label for="servicio">Servicio de interés</label>
+          <select id="servicio" name="servicio">
+            <option value="">Selecciona un servicio</option>
+            <option>Desarrollo Web & Mobile</option>
+            <option>Inteligencia Artificial</option>
+            <option>Equipo Dedicado</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Cuéntanos sobre tu proyecto</label>
+          <textarea id="mensaje" name="message" rows="4" placeholder="¿Qué quieres construir? ¿Cuál es el mayor reto técnico que enfrentas?" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary full-width">
+          <span>Enviar mensaje</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <div class="form-success" id="formSuccess">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          ¡Mensaje enviado! Te contactamos en menos de 24h.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <span class="logo-bracket">&lt;</span>Prechus<span class="logo-accent">Tech</span><span class="logo-bracket">/&gt;</span>
+        </a>
+        <p>Software que transforma negocios.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <strong>Servicios</strong>
+          <a href="#servicios">Desarrollo Web & Mobile</a>
+          <a href="#servicios">Arquitectura Cloud</a>
+          <a href="#servicios">Inteligencia Artificial</a>
+          <a href="#servicios">CTO as a Service</a>
+        </div>
+        <div class="footer-col">
+          <strong>Empresa</strong>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#portafolio">Portafolio</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 PrechusTech. Todos los derechos reservados.</span>
+      <span>Hecho con ❤️ en México</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
